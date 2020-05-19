@@ -9,9 +9,22 @@ def calc_fib(n):
     return calc_fib(n - 1) + calc_fib(n - 2)
 
 
+def calc_fib_fast(n):
+    arr = [0, 1]
+
+    for i in range(2, n+1):
+        arr.append(arr[i-1] + arr[i-2])
+
+    return arr[n]
+
+
 if __name__ == '__main__':
     n = int(input())
     a = time.time()
     print(calc_fib(n))
     b = time.time()
     print('Time taken:', (b-a))
+    a = time.time()
+    print(calc_fib_fast(n))
+    b = time.time()
+    print('Time taken fast:', (b - a))
