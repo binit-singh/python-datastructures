@@ -21,14 +21,4 @@ def gcd_fast(a, b):
 
 if __name__ == "__main__":
     a, b = map(int, input().split())
-    # First algo
-    tic = time.time()
-    print(gcd_naive(a, b))
-    toc = time.time()
-    print('Time taken:', (toc-tic))
-
-    # Second algo
-    tic = time.time()
     print(gcd_fast(a, b))
-    toc = time.time()
-    print('Time taken fast:', (toc-tic))
